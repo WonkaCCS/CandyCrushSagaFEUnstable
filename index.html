@@ -447,6 +447,19 @@
         </script>
     </head>
     <body>
+        <body onload="checkPassword()">
+            <script>
+                function checkPassword() {
+                    const correctPassword = "IceCreamSandwich";
+                    let userInput = prompt("Warning! This site has been locked to administrators and beta testers, you will need a password to open it.");
+                    
+                    if (userInput !== correctPassword) {
+                        alert("Incorrect password.");
+                        window.location.href = "https://boxy.neocities.org/tesseract";
+                    }
+                }
+            </script>
+            
         <center>
             <div id="flashContainer">
                 <img id="blurredBackground" alt="Blurred Background" style="display: none;">
